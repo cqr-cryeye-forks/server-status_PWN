@@ -145,6 +145,7 @@ class Request_Handler():
                                allow_redirects=False)
             output = str(req.content)
         except Exception as e:
+            print(str(e))
             Exception_Handler(e)
             output = ''
         return(output)
