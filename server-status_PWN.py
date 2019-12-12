@@ -318,6 +318,7 @@ def main(url, full_logging=False):
     while True:
         print('%s[#] Requesting. %s' % (tcolor.light_blue, tcolor.endcolor))
         output = Request_Handler().send_request(url)
+        print(output)
         validate_output = Response_Handler().validate_response(output)
         if validate_output is not True:
             print('%s[!] Output does not seem to be valid.%s' % (tcolor.red, tcolor.endcolor))
